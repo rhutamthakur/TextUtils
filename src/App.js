@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
+import About from "./components/About";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
+  //DARK MODE USING STATE VARIABLE
+  const [lightmode, setMode] = useState("light");
+  const [btntext, setBtnText] = useState("Dark Mode");
+  const toggleMode = () => {
+    if (lightmode === "light") {
+      setMode("dark");
+      setBtnText("Light Mode");
+      document.body.style.backgroundColor = "#212529";
+    } else {
+      setMode("light");
+      setBtnText("Dark Mode");
+      document.body.style.backgroundColor = "white";
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar
+          title="TextUtils"
+          about="About Us"
+          mode={lightmode}
+          toggleMode={toggleMode}
+          btntext={btntext}
+        />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <TextForm
+                text="Enter text here"
+                heading="Convert Text Here"
+                mode={lightmode}
+                toggleMode={toggleMode}
+              />
+            }
+          ></Route>
+          <Route exact path="/about" element={<About />}></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
