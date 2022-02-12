@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   //DARK MODE USING STATE VARIABLE
@@ -36,13 +36,17 @@ function App() {
             element={
               <TextForm
                 text="Enter text here"
-                heading="Convert Text Here"
+                heading="Try TextUtils- Analyse Text"
                 mode={lightmode}
                 toggleMode={toggleMode}
               />
             }
           ></Route>
-          <Route exact path="/about" element={<About />}></Route>
+          <Route
+            exact
+            path="/about"
+            element={<About mode={lightmode} />}
+          ></Route>
         </Routes>
       </Router>
     </>

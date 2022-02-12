@@ -1,113 +1,136 @@
 import React from "react";
 
-export default function About() {
+export default function About(props) {
   return (
     <>
-      <div className="container">
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
+      <div
+        className="container "
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
+        <h1>About Us</h1>
+        <div
+          className="accordion"
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+            backgroundColor: props.mode === "light" ? "white" : "black",
+          }}
+          id="accordionExample"
+        >
+          <div
+            className="card"
+            style={{
+              color: props.mode === "dark" ? "white" : "black",
+              backgroundColor: props.mode === "light" ? "white" : "black",
+            }}
+          >
+            <div className="card-header" id="headingOne">
+              <h2 className="mb-0">
                 <button
-                  class="btn btn-link"
+                  className={`btn btn-${props.mode}`}
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  Collapsible Group Item #1
+                  What does text analytics include?
                 </button>
               </h2>
             </div>
 
             <div
               id="collapseOne"
-              class="collapse show"
+              className="collapse show"
               aria-labelledby="headingOne"
               data-parent="#accordionExample"
+              style={{
+                color: props.mode === "dark" ? "white" : "black",
+                backgroundColor: props.mode === "light" ? "white" : "black",
+              }}
             >
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+              <div className="card-body">
+                Text Analytics involves information retrieval from unstructured
+                data and the process of structuring the input text to derive
+                patters and trends and evaluating and interpreting the output
+                data.
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
+          <div
+            className="card"
+            style={{
+              color: props.mode === "dark" ? "white" : "black",
+              backgroundColor: props.mode === "light" ? "white" : "black",
+            }}
+          >
+            <div className="card-header" id="headingTwo">
+              <h2 className="mb-0">
                 <button
-                  class="btn btn-link collapsed"
+                  className={`btn btn-${props.mode}`}
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseTwo"
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  Collapsible Group Item #2
+                  What is the process of text analytics?
                 </button>
               </h2>
             </div>
             <div
               id="collapseTwo"
-              class="collapse"
+              className="collapse"
               aria-labelledby="headingTwo"
               data-parent="#accordionExample"
+              style={{
+                color: props.mode === "dark" ? "white" : "black",
+                backgroundColor: props.mode === "light" ? "white" : "black",
+              }}
             >
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+              <div className="card-body">
+                Text analytics is the automated process of translating large
+                volumes of unstructured text into quantitative data to uncover
+                insights, trends, and patterns. Combined with data visualization
+                tools, this technique enables companies to understand the story
+                behind the numbers and make better decisions
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
+          <div
+            className="card"
+            style={{
+              color: props.mode === "dark" ? "white" : "black",
+              backgroundColor: props.mode === "light" ? "white" : "black",
+            }}
+          >
+            <div className="card-header" id="headingThree">
+              <h2 className="mb-0">
                 <button
-                  class="btn btn-link collapsed"
+                  className={`btn btn-${props.mode}`}
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseThree"
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  Collapsible Group Item #3
+                  What are the types of textual analysis?
                 </button>
               </h2>
             </div>
             <div
               id="collapseThree"
-              class="collapse"
+              className="collapse"
               aria-labelledby="headingThree"
               data-parent="#accordionExample"
+              style={{
+                color: props.mode === "dark" ? "white" : "black",
+                backgroundColor: props.mode === "light" ? "white" : "black",
+              }}
             >
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+              <div className="card-body">
+                There are four major approaches to textual analysis: rhetorical
+                criticism, content analysis, interaction analysis, and
+                performance studies.
               </div>
             </div>
           </div>

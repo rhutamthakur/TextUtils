@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 export default function Navbar(props) {
   return (
     <nav
-      class={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
-      <a class="navbar-brand" href="#">
+      <Link className="navbar-brand" to="">
         {props.title}
-      </a>
+      </Link>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -19,24 +19,24 @@ export default function Navbar(props) {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <Link class="nav-link" to="/">
-              Home <span class="sr-only">(current)</span>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <Link className="nav-link" to="/">
+              Home <span className="sr-only">(current)</span>
             </Link>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/about">
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">
               {props.about}
             </Link>
           </li>
         </ul>
         <button
-          class={`btn btn-${props.mode} my-2 my-sm-0`}
+          className={`btn btn-${props.mode} my-2 my-sm-0`}
           onClick={props.toggleMode}
           type="submit"
         >

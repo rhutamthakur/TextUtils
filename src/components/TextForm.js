@@ -44,7 +44,7 @@ export default function TextForm(props) {
         <div className="container">
           <h1>{props.heading}</h1>
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">{props.text}</label>
+            <label htmlFor="exampleFormControlTextarea1">{props.text}</label>
             <textarea
               className="form-control"
               id="exampleFormControlTextarea1"
@@ -91,10 +91,10 @@ export default function TextForm(props) {
         <div className="container">
           <h1>Text summary</h1>
           <p>
-            Your text has {text.split(" ").length} words and {text.length}{" "}
+            Your text has {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length}{" "}
             characters
           </p>
-          <p>Time required to read: {0.008 * text.split(" ").length} minutes</p>
+          <p>Time required to read: {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes</p>
         </div>
       </div>
     </>
